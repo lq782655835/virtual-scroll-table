@@ -15,6 +15,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name virtual-scroll-table ./src/components/index.js",
+    "release:demo": "vue-cli-service build && gh-pages -d dist",
     "release": "standard-version -i CHANGELOG.md -r patch",
     "dev:docs": "vuepress dev docs",
     "build:docs": "vuepress build docs",
