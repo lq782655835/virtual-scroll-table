@@ -1,7 +1,4 @@
-import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
-
-import ElTablePlus from '../../src/components/index'
+import VirtualScrollTable from '../../src/components/index'
 
 export default ({
     Vue, // VuePress 正在使用的 Vue 构造函数
@@ -9,6 +6,5 @@ export default ({
     router, // 当前应用的路由实例
     siteData // 站点元数据
   }) => {
-    Vue.use(ElementUI);
-    Vue.use(ElTablePlus)
+    Vue.use(VirtualScrollTable);
   }

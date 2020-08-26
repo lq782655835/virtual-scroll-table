@@ -24,7 +24,7 @@
   color: #333;
 }
 
-.m-virtual-table .td{
+.m-virtual-table .td,.empty{
   padding: 12px;
   font-family: 'PingFangSC-Regular';
 
@@ -48,4 +48,9 @@
   border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
   border-radius: 0 0 2px 2px;
+}
+
+.m-virtual-table .empty {
+  margin-top: 8px;
+  text-align: center;
 }

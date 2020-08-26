@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import { RecycleScroller } from 'vue-virtual-scroller'
 import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
 import './index.css'
@@ -10,7 +9,6 @@ export default {
     data: { type: Array, default: () => [] },
     disabled: { type: Boolean, default:false },
     maxHeight: { type: Number, default: 200 },
-    loading: { type: Boolean, default: false },
   },
   methods: {
     loadMore () {
@@ -67,7 +65,8 @@ export default {
       <div class="m-virtual-table">
         { renderHeader() }
         {
-          this.data.length ? <RecycleScroller
+          this.data.length
+          ? <RecycleScroller
             class="m-virtual-table-body"
             style={{ maxHeight: this.maxHeight + 'px' }}
             items={this.data}
@@ -76,9 +75,8 @@ export default {
             infinite-scroll-distance="0"
             scopedSlots={scopedSlots}
             {...{ directives, props: this.$attrs }}
-          /> : <a-spin spinning={this.loading}>
-            <div class="ant-table-placeholder">暂无数据</div>
-          </a-spin>
+          />
+          : <div class="empty">暂无数据</div>
         }
       </div>
     )
